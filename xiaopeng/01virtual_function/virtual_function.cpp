@@ -87,6 +87,10 @@ struct ProductReducer : Reducer {
 
 };
 int main() {
-    // std::vector<int> v {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-       return 0;
+    std::vector<int> v {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    VectorInputer input(v);
+    SumReducer reducer;
+    int result = reduce(input, reducer);
+    std::cout << "result = " << result << '\n';
+    return 0;
 }
